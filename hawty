@@ -1,0 +1,39 @@
+
+H - header
+A - about
+W - work
+T - things you do 
+Y - your contact
+
+
+
+.image-switcher {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .switch-image {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: auto;
+    animation: fadeInOut 10s infinite;
+  }
+  
+  .switch-image:nth-child(2){
+    animation-delay: 5s;
+  }
+  
+  .switch-image:nth-child(3){
+    animation-delay: 5s;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+    }
+  }

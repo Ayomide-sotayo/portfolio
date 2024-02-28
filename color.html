@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to My Portfolio</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #welcomeMessage, #nameInput {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #nameForm {
+    margin-top: 20px;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+  }
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  h1, h2 {
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div id="welcomeMessage">
+  <h1>Welcome to My Portfolio, <span id="userName"></span>!</h1>
+</div>
+
+<div id="nameInput">
+  <h2>Please enter your name:</h2>
+  <form id="nameForm">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+document.getElementById("nameForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form submission
+  var userName = document.getElementById("name").value;
+  document.getElementById("nameInput").style.display = "none"; // Hide name input
+  document.getElementById("welcomeMessage").style.display = "block"; // Show welcome message
+  document.getElementById("userName").textContent = userName; // Display user's name in welcome message
+});
+</script>
+
+</body>
+</html>
+
